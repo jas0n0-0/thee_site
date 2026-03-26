@@ -1,0 +1,105 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #0a0a0a;
+    color: white;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+/* Nav aligned right */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* Sections layout */
+.group1, .group2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 120px 10%;
+    min-height: 100vh;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Alternate layout (image right/left) */
+.group2 {
+    flex-direction: row-reverse;
+}
+
+/* Images */
+.group1 img, .group2 img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Hover zoom effect */
+.group1 img:hover,
+.group2 img:hover {
+    transform: scale(1.05);
+}
+
+/* Text container */
+.group1 div,
+.group2 div {
+    max-width: 500px;
+}
+
+/* Headings */
+h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .group1, .group2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
